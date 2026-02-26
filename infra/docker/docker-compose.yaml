@@ -1,0 +1,49 @@
+services:
+  club-postgres:
+    image: postgres:16-alpine
+    container_name: kaagent-club-postgres
+    environment:
+      POSTGRES_USER: ${CLUB_DB_USER}
+      POSTGRES_PASSWORD: ${CLUB_DB_PASSWORD}
+      POSTGRES_DB: ${CLUB_DB_NAME}
+    ports:
+      - "${CLUB_DB_PORT}:5432"
+    volumes:
+      - postgres_club_data:/var/lib/postgresql/data
+    env_file:
+      - ../../.env.local
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${CLUB_DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - kaagent-network
+
+  eval-postgres:
+    image: postgres:16-alpine
+    container_name: kaagent-eval-postgres
+    environment:
+      POSTGRES_USER: ${EVAL_DB_USER}
+      POSTGRES_PASSWORD: ${EVAL_DB_PASSWORD}
+      POSTGRES_DB: ${EVAL_DB_NAME}
+    ports:
+      - "${EVAL_DB_PORT}:5432"      
+    volumes:
+      - postgres_eval_data:/var/lib/postgresql/data
+    env_file:
+      - ../../.env.local
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${EVAL_DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - kaagent-network
+
+volumes:
+  postgres_club_data:
+  postgres_eval_data:
+
+networks:
+  kaagent-network:
