@@ -15,6 +15,7 @@ export const playersTable = pgTable(
     opteamalId: uuid('opteamal-id').notNull().unique(),
     firstName: varchar('first_name', { length: 255 }).notNull(),
     lastName: varchar('last_name', { length: 255 }).notNull(),
+    slug: varchar('slug', { length: 255 }).notNull(),
     birthDate: date('birth_date').notNull(),
     gender: varchar('gender', { length: 255 }).notNull(),
     shirtNumber: integer('shirt_number').notNull().default(-1),

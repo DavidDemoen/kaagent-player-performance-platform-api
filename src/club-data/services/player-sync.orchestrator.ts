@@ -6,6 +6,7 @@ import { TeamsRepository } from '../repositories/teams.repository';
 import { OpteamalPlayerDto, PlayerInsert, PlayerUpsertObject } from '../dto';
 import { APIError } from 'better-auth';
 import { PositionsRepository } from '../repositories/position.repository';
+import { generatePlayerSlug } from 'lib/utils/slugs';
 
 @Injectable()
 export class PlayerSyncOrchestrator {
@@ -130,6 +131,7 @@ export class PlayerSyncOrchestrator {
       gender: gender ?? 'not_provided',
       nationality: nationality ?? 'not_provided',
       secondNationality,
+      slug: generatePlayerSlug(firstName, lastName),
       createdAt: new Date(createdAt),
       updatedAt: new Date(updatedAt),
     };
