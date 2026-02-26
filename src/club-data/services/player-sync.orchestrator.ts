@@ -81,7 +81,9 @@ export class PlayerSyncOrchestrator {
               `Syncing position ${positionHistoryObject.positionName} for player with opteamal id ${player.opteamalId}`,
             );
 
-            const response = await this.positionsRepository.createPosition({name: positionHistoryObject.positionName});
+            const response = await this.positionsRepository.createPosition({
+              name: positionHistoryObject.positionName,
+            });
 
             const positionUpsertResp =
               await this.positionsHistoryRepository.upsertPositionsHistory({

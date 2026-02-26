@@ -25,7 +25,10 @@
     "db:migrate:evaluations": "drizzle-kit migrate --config drizzle/config/drizzle.evaluations.config.ts",
     "db:generate:club": "drizzle-kit generate --config drizzle/config/drizzle.club.config.ts",
     "db:generate:evaluations": "drizzle-kit generate --config drizzle/config/drizzle.evaluations.config.ts",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "db:setup": "sh scripts/database/setup-db.sh",
+    "db:teardown": "sh scripts/database/teardown-db.sh",
+    "db:destroy": "sh scripts/database/destroy-db.sh"
   },
   "dependencies": {
     "@mguay/nestjs-better-auth": "^1.0.4",

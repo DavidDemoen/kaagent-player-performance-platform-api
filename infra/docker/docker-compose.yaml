@@ -7,13 +7,13 @@ services:
       POSTGRES_PASSWORD: ${CLUB_DB_PASSWORD}
       POSTGRES_DB: ${CLUB_DB_NAME}
     ports:
-      - "${CLUB_DB_PORT}:5432"
+      - '${CLUB_DB_PORT}:5432'
     volumes:
       - postgres_club_data:/var/lib/postgresql/data
     env_file:
-      - ../../.env.local
+      - ../../.env
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${CLUB_DB_USER}"]
+      test: ['CMD-SHELL', 'pg_isready -U ${CLUB_DB_USER}']
       interval: 10s
       timeout: 5s
       retries: 5
@@ -28,13 +28,13 @@ services:
       POSTGRES_PASSWORD: ${EVAL_DB_PASSWORD}
       POSTGRES_DB: ${EVAL_DB_NAME}
     ports:
-      - "${EVAL_DB_PORT}:5432"      
+      - '${EVAL_DB_PORT}:5432'
     volumes:
       - postgres_eval_data:/var/lib/postgresql/data
     env_file:
-      - ../../.env.local
+      - ../../.env
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${EVAL_DB_USER}"]
+      test: ['CMD-SHELL', 'pg_isready -U ${EVAL_DB_USER}']
       interval: 10s
       timeout: 5s
       retries: 5

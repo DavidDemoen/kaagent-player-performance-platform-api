@@ -2,5 +2,7 @@ export function generatePlayerSlug(
   firstName: string,
   lastName: string,
 ): string {
-  return `${firstName}-${lastName}`.toLowerCase().replace(/\s+/g, '-');
+  const trimmedFirst = firstName.trim();
+  const trimmedLast = lastName.trim();
+  return `${trimmedFirst}-${trimmedLast}`.toLowerCase().replace(/\s+/g, '-');
 }
