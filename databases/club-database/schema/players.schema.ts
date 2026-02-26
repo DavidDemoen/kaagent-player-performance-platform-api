@@ -27,6 +27,7 @@ export const playersTable = pgTable(
   (t) => [
     index('players_full_name_idx').on(t.firstName, t.lastName),
     index('players_opteamal_id_idx').on(t.opteamalId),
+    index('players_slug_idx').on(t.slug),
   ],
 );
 export const playersRelations = relations(playersTable, ({ many }) => ({
