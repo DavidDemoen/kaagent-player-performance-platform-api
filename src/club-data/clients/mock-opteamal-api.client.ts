@@ -4,7 +4,7 @@ import { OpteamalPlayerDto, OpteamalTeamDto } from '../dto';
 import {
   opteamalPlayersMockData,
   opteamalTeamsMockData,
-} from '@kaagent-data/mock-data';
+} from 'data/opteamal-mock-data/opteamal-mock-data';
 import { APIError } from 'better-auth';
 
 @Injectable()

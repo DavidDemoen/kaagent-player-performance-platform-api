@@ -1,7 +1,7 @@
 {
-  "name": "kaagent-data-api",
+  "name": "kaagent-player-performance-api",
   "version": "1.0.0",
-  "description": "Backend API for kaagent-data platform",
+  "description": "Backend API for the Kaagent Player Performance Platform",
   "author": "",
   "license": "UNLICENSED",
   "main": "dist/main.js",
@@ -28,7 +28,6 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
-    "@kaagent-data/types": "^1.0.0",
     "@mguay/nestjs-better-auth": "^1.0.4",
     "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.0.1",
@@ -93,5 +92,5 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "packageManager": "npm@10.0.0"
+  "packageManager": "pnpm@10.29.3"
 }
