@@ -1,0 +1,1 @@
+ALTER TABLE "evaluations" ADD COLUMN "evaluation_period" jsonb NOT NULL;

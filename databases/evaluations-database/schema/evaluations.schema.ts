@@ -19,6 +19,7 @@ export const evaluationsTable = pgTable(
       .notNull()
       .references(() => evaluationTemplatesTable.id),
     evaluationData: jsonb('evaluation_data').notNull(),
+    evaluationPeriod: jsonb('evaluation_period').notNull(),
     status: varchar('status', { length: 20 }).notNull().default('draft'),
     createdAt: timestamp('created_at').notNull().defaultNow(),
     updatedAt: timestamp('updated_at')
