@@ -1,0 +1,408 @@
+{
+  "metadata": {
+    "origin": "csv_import",
+    "date_time_import": "2025-02-28 12:21:36",
+    "date_evaluation": "december 2024"
+  },
+  "evaluation_data": {
+    "basic_technical_skills": {
+      "right_foot": {
+        "attrCode": "BTS-BHF-RF",
+        "score": "4",
+        "comment": ""
+      },
+      "left_foot": {
+        "attrCode": "BTS-BHF-LF",
+        "score": "2",
+        "comment": ""
+      },
+      "passing": {
+        "eliminating_pass": {
+          "attrCode": "BTS-PASS-EP",
+          "score": "4",
+          "comment": ""
+        },
+        "vertical_pass": {
+          "attrCode": "BTS-PASS-VP",
+          "score": "5.0",
+          "comment": ""
+        },
+        "diagonal_pass": {
+          "attrCode": "BTS-PASS-DP",
+          "score": "4",
+          "comment": ""
+        },
+        "medium_pass": {
+          "attrCode": "BTS-PASS-ML",
+          "score": "4",
+          "comment": ""
+        },
+        "long_pass": {
+          "attrCode": "BTS-PASS-LP",
+          "score": "5.0",
+          "comment": ""
+        },
+        "instep_pass": {
+          "attrCode": "BTS-PASS-IP",
+          "score": "4",
+          "comment": ""
+        },
+        "<<chip>>": {
+          "attrCode": "BTS-PASS-CHP",
+          "score": "4",
+          "comment": ""
+        },
+        "hard_pass_free_player": {
+          "attrCode": "BTS-PASS-HPFP",
+          "score": "4",
+          "comment": ""
+        },
+        "soft_pass_free_player": {
+          "attrCode": "BTS-PASS-SPP",
+          "score": "4",
+          "comment": ""
+        }
+      },
+      "control": {
+        "stationary_ground": {
+          "attrCode": "BTS-BC-SCG",
+          "score": "4",
+          "comment": ""
+        },
+        "standstill_air": {
+          "attrCode": "BTS-BC-SCA",
+          "score": "4",
+          "comment": ""
+        },
+        "first_touch_acceleration": {
+          "attrCode": "BTS-BC-CA",
+          "score": "3.0",
+          "comment": ""
+        },
+        "presure_from_behind": {
+          "attrCode": "BTS-BC-CP",
+          "score": "No Score",
+          "comment": ""
+        }
+      },
+      "dribbling": {
+        "accelerated_dribbling": {
+          "attrCode": "BTS-DRIB-WA",
+          "score": "4",
+          "comment": ""
+        },
+        "efficiency_one_v_one_dribbling": {
+          "attrCode": "BTS-DRIB-E1V1",
+          "score": "No Score",
+          "comment": ""
+        },
+        "awareness_overview": {
+          "attrCode": "BTS-DRIB-MO",
+          "score": "4",
+          "comment": ""
+        }
+      },
+      "": {
+        "anticipation": {
+          "attrCode": "BTS-1V1-ANT",
+          "score": "4",
+          "comment": ""
+        },
+        "interception": {
+          "attrCode": "BTS-1V1-INT",
+          "score": "5.0",
+          "comment": ""
+        },
+        "challenge_defensive": {
+          "attrCode": "BTS-1V1-DC",
+          "score": "3.0",
+          "comment": ""
+        },
+        "challenge_crosspass": {
+          "attrCode": "BTS-1V1-CCP",
+          "score": "3.0",
+          "comment": ""
+        },
+        "challenge_shot": {
+          "attrCode": "BTS-1V1-CSG",
+          "score": "4",
+          "comment": ""
+        },
+        "decelerated_evasion": {
+          "attrCode": "BTS-1V1-DE",
+          "score": "4",
+          "comment": ""
+        },
+        "efficiency_one_v_one_challenge": {
+          "attrCode": "BTS-1V1-E1V1",
+          "score": "5.0",
+          "comment": ""
+        }
+      },
+      "shot": {
+        "powerfull_shot": {
+          "attrCode": "BTS-SHOT-PS",
+          "score": "4",
+          "comment": ""
+        },
+        "placement_shot": {
+          "attrCode": "BTS-SHOT-PLS",
+          "score": "4",
+          "comment": ""
+        },
+        "after_dribbling_shot": {
+          "attrCode": "BTS-SHOT-AD",
+          "score": "4",
+          "comment": ""
+        },
+        "efficiency_finish": {
+          "attrCode": "BTS-SHOT-EF",
+          "score": "No Score",
+          "comment": ""
+        }
+      },
+      "assist": {
+        "first_touch_assist": {
+          "attrCode": "BTS-ASSIST-OTA",
+          "score": "No Score",
+          "comment": ""
+        },
+        "early_cross_assist": {
+          "attrCode": "BTS-ASSIST-EC",
+          "score": "No Score",
+          "comment": ""
+        },
+        "assist_45": {
+          "attrCode": "BTS-ASSIST-45",
+          "score": "No Score",
+          "comment": ""
+        },
+        "chip_second_zone": {
+          "attrCode": "BTS-ASSIST-CSZ",
+          "score": "No Score",
+          "comment": ""
+        }
+      },
+      "development_goals_basics": "basics,lichaamspositie1tegen1,regressie-behoud-progressie?",
+      "progress_basics": "",
+      "comments_basics": ""
+    },
+    "team_tactics": {
+      "tactics_attacking": {
+        "acceleration_individual": {
+          "attrCode": "TT-ATT-IA",
+          "score": "3.0",
+          "comment": ""
+        },
+        "acceleration_combination": {
+          "attrCode": "TT-ATT-AC",
+          "score": "4",
+          "comment": ""
+        },
+        "through_pass": {
+          "attrCode": "TT-ATT-TP",
+          "score": "No Score",
+          "comment": ""
+        },
+        "long_ball": {
+          "attrCode": "TT-ATT-LB",
+          "score": "5.0",
+          "comment": ""
+        }
+      },
+      "tactics_build_up": {
+        "acceleration_awareness": {
+          "attrCode": "TT-BUILD-IP",
+          "score": "4",
+          "comment": ""
+        },
+        "space_awareness": {
+          "attrCode": "TT-BUILD-SA",
+          "score": "4",
+          "comment": ""
+        },
+        "timing_positioning": {
+          "attrCode": "TT-BUILD-TAP",
+          "score": "4",
+          "comment": ""
+        },
+        "timing_acceleration": {
+          "attrCode": "TT-BUILD-TA",
+          "score": "4",
+          "comment": ""
+        }
+      },
+      "general_game_intelligence": {
+        "scanning": {
+          "attrCode": "TT-GINT-SC",
+          "score": "4",
+          "comment": ""
+        },
+        "awareness": {
+          "attrCode": "TT-GINT-DM",
+          "score": "4",
+          "comment": ""
+        },
+        "awareness_overload": {
+          "attrCode": "TT-GINT-ODM",
+          "score": "No Score",
+          "comment": ""
+        }
+      },
+      "zonal_marking": {
+        "spacial_marking": {
+          "attrCode": "TT-ZM-MOH",
+          "score": "5.0",
+          "comment": ""
+        },
+        "creation_overload": {
+          "attrCode": "TT-ZM-OC",
+          "score": "3.0",
+          "comment": ""
+        },
+        "press_aggressiveness": {
+          "attrCode": "TT-ZM-AP",
+          "score": "5.0",
+          "comment": ""
+        },
+        "one_touch_defending": {
+          "attrCode": "TT-ZM-OTD",
+          "score": "4",
+          "comment": ""
+        }
+      },
+      "man_marking": {
+        "man_marking_opposition_half": {
+          "attrCode": "TT-MM-OH",
+          "score": "5.0",
+          "comment": ""
+        },
+        "man_marking_own_penalty_area": {
+          "attrCode": "TT-MM-OPA",
+          "score": "5.0",
+          "comment": ""
+        },
+        "gegenpressing_man_marking": {
+          "attrCode": "TT-MM-GO",
+          "score": "4",
+          "comment": ""
+        },
+        "gegenpressing_offensive_marking": {
+          "attrCode": "TT-MM-GOM",
+          "score": "5.0",
+          "comment": ""
+        }
+      },
+      "development_goals_tactics": "teamtactics,keuzesaanbalinkorteopbouw,instijgendelijn,regressie-behoud-progressie?",
+      "progress_tactics": "",
+      "comments_tactics": ""
+    },
+    "physical_attributes": {
+      "coordination": {
+        "attrCode": "PA-PA-COR",
+        "score": "3.0",
+        "comment": ""
+      },
+      "mobility_agility": {
+        "attrCode": "PA-PA-FLEX",
+        "score": "5.0",
+        "comment": ""
+      },
+      "speed_5m": {
+        "attrCode": "PA-PA-SS5",
+        "score": "4",
+        "comment": ""
+      },
+      "speed_10m": {
+        "attrCode": "PA-PA-SS10",
+        "score": "4",
+        "comment": ""
+      },
+      "speed_after_10m": {
+        "attrCode": "PA-PA-SS+10",
+        "score": "5.0",
+        "comment": ""
+      },
+      "vertical_jump": {
+        "attrCode": "PA-PA-VJ",
+        "score": "4",
+        "comment": ""
+      },
+      "agility_t_test": {
+        "attrCode": "PA-PA-AG",
+        "score": "3.0",
+        "comment": ""
+      },
+      "endurance_vma": {
+        "attrCode": "PA-PA-END",
+        "score": "4",
+        "comment": ""
+      },
+      "balance": {
+        "attrCode": "PA-PA-BAL",
+        "score": "4",
+        "comment": ""
+      },
+      "body_functionality": {
+        "attrCode": "PA-PA-BF",
+        "score": "5.0",
+        "comment": ""
+      },
+      "development_goals_physical": "fysiek,wendbaarheid,regressie-behoud-progressie?",
+      "progress_physical": "",
+      "comments_physical": ""
+    },
+    "mental_attributes": {
+      "self_regulation": {
+        "attrCode": "MA-MA-SR",
+        "score": "5.0",
+        "comment": ""
+      },
+      "self_confidence": {
+        "attrCode": "MA-MA-SC",
+        "score": "5.0",
+        "comment": ""
+      },
+      "training_engagement": {
+        "attrCode": "MA-MA-TE",
+        "score": "5.0",
+        "comment": ""
+      },
+      "game_engagement": {
+        "attrCode": "MA-MA-GE",
+        "score": "5.0",
+        "comment": ""
+      },
+      "winning_mentality": {
+        "attrCode": "MA-MA-WM",
+        "score": "4",
+        "comment": ""
+      },
+      "mental_resilience": {
+        "attrCode": "MA-MA-MR",
+        "score": "5.0",
+        "comment": ""
+      },
+      "initiative_courage": {
+        "attrCode": "MA-MA-IC",
+        "score": "3.0",
+        "comment": ""
+      },
+      "lucidity": {
+        "attrCode": "MA-MA-LU",
+        "score": "4",
+        "comment": ""
+      },
+      "coacheability": {
+        "attrCode": "MA-MA-CO",
+        "score": "5.0",
+        "comment": ""
+      },
+      "leadership": {
+        "attrCode": "MA-MA-LE",
+        "score": "4",
+        "comment": ""
+      }
+    }
+  }
+}

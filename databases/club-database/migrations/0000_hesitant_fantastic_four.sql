@@ -10,6 +10,7 @@ CREATE TABLE "players" (
 	"opteamal-id" uuid NOT NULL,
 	"first_name" varchar(255) NOT NULL,
 	"last_name" varchar(255) NOT NULL,
+	"slug" varchar(255) NOT NULL,
 	"birth_date" date NOT NULL,
 	"gender" varchar(255) NOT NULL,
 	"shirt_number" integer DEFAULT -1 NOT NULL,
@@ -99,6 +100,7 @@ CREATE INDEX "teams_name_idx" ON "teams" USING btree ("name");--> statement-brea
 CREATE INDEX "teams_opteamal_key_idx" ON "teams" USING btree ("opteamal_key");--> statement-breakpoint
 CREATE INDEX "players_full_name_idx" ON "players" USING btree ("first_name","last_name");--> statement-breakpoint
 CREATE INDEX "players_opteamal_id_idx" ON "players" USING btree ("opteamal-id");--> statement-breakpoint
+CREATE INDEX "players_slug_idx" ON "players" USING btree ("slug");--> statement-breakpoint
 CREATE INDEX "account_userId_idx" ON "account" USING btree ("user_id");--> statement-breakpoint
 CREATE INDEX "session_userId_idx" ON "session" USING btree ("user_id");--> statement-breakpoint
 CREATE INDEX "verification_identifier_idx" ON "verification" USING btree ("identifier");

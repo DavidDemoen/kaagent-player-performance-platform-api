@@ -1,5 +1,5 @@
 {
-  "id": "7add8455-10c9-4210-ab5c-25848bb56b9d",
+  "id": "3c13d70b-9497-4090-9dde-a3560738ac2d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -104,6 +104,12 @@
           "primaryKey": false,
           "notNull": true
         },
+        "slug": {
+          "name": "slug",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
         "birth_date": {
           "name": "birth_date",
           "type": "date",
@@ -175,6 +181,21 @@
           "columns": [
             {
               "expression": "opteamal-id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "players_slug_idx": {
+          "name": "players_slug_idx",
+          "columns": [
+            {
+              "expression": "slug",
               "isExpression": false,
               "asc": true,
               "nulls": "last"

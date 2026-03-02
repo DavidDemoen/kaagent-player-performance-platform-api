@@ -1,85 +1,9 @@
 {
-  "id": "6e9a0d95-b4d3-4daa-8af0-8b4da699c956",
+  "id": "005b2e11-d766-4533-9723-8613a1b77129",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.evaluation_templates": {
-      "name": "evaluation_templates",
-      "schema": "",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "uuid",
-          "primaryKey": true,
-          "notNull": true,
-          "default": "gen_random_uuid()"
-        },
-        "type": {
-          "name": "type",
-          "type": "varchar(50)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "version": {
-          "name": "version",
-          "type": "varchar",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'1.0'"
-        },
-        "template_scheme": {
-          "name": "template_scheme",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "is_active": {
-          "name": "is_active",
-          "type": "boolean",
-          "primaryKey": false,
-          "notNull": true,
-          "default": true
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "now()"
-        }
-      },
-      "indexes": {
-        "evaluation_templates_type_idx": {
-          "name": "evaluation_templates_type_idx",
-          "columns": [
-            {
-              "expression": "type",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
-      "foreignKeys": {},
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
-      "isRLSEnabled": false
-    },
     "public.evaluations": {
       "name": "evaluations",
       "schema": "",
@@ -97,20 +21,14 @@
           "primaryKey": false,
           "notNull": true
         },
-        "coach_ids": {
-          "name": "coach_ids",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "evaluation_template_id": {
-          "name": "evaluation_template_id",
+        "author_id": {
+          "name": "author_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "evaluation_data": {
-          "name": "evaluation_data",
+        "data_objects": {
+          "name": "data_objects",
           "type": "jsonb",
           "primaryKey": false,
           "notNull": true
@@ -129,18 +47,19 @@
           "notNull": true,
           "default": "now()"
         },
+        "submitted_at": {
+          "name": "submitted_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'1970-01-01 00:00:00.000'"
+        },
         "updated_at": {
           "name": "updated_at",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true,
           "default": "now()"
-        },
-        "submitted_at": {
-          "name": "submitted_at",
-          "type": "timestamp",
-          "primaryKey": false,
-          "notNull": false
         }
       },
       "indexes": {
@@ -159,11 +78,11 @@
           "method": "btree",
           "with": {}
         },
-        "evaluations_evaluation_template_id_idx": {
-          "name": "evaluations_evaluation_template_id_idx",
+        "evaluations_author_id_idx": {
+          "name": "evaluations_author_id_idx",
           "columns": [
             {
-              "expression": "evaluation_template_id",
+              "expression": "author_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -175,21 +94,63 @@
           "with": {}
         }
       },
-      "foreignKeys": {
-        "evaluations_evaluation_template_id_evaluation_templates_id_fk": {
-          "name": "evaluations_evaluation_template_id_evaluation_templates_id_fk",
-          "tableFrom": "evaluations",
-          "tableTo": "evaluation_templates",
-          "columnsFrom": [
-            "evaluation_template_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.evaluation_templates": {
+      "name": "evaluation_templates",
+      "schema": "",
+      "columns": {
+        "name": {
+          "name": "name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "schema": {
+          "name": "schema",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_active": {
+          "name": "is_active",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
         }
       },
+      "indexes": {},
+      "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {},
       "policies": {},
