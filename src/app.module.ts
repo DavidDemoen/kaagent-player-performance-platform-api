@@ -13,6 +13,7 @@ import { ClubDataModule } from './club-data/club-data.module';
 import { club_database_connection } from './database/database-connections';
 import { ScheduleModule } from '@nestjs/schedule';
 import { ClubApiModule } from './club-api/club-data-api.module';
+import { PlayersEvaluationsModule } from './player-evaluations/player-evaluations.module';
 
 @Module({
   imports: [
@@ -38,6 +39,7 @@ import { ClubApiModule } from './club-api/club-data-api.module';
     }),
     ClubDataModule,
     ClubApiModule,
+    PlayersEvaluationsModule,
   ],
   controllers: [AppController],
   providers: [
