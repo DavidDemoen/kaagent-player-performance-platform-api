@@ -106,8 +106,8 @@ importers:
         specifier: ^30.0.0
         version: 30.2.0(@types/node@25.3.0)(esbuild-register@3.6.0(esbuild@0.20.2))(ts-node@10.9.2(@types/node@25.3.0)(typescript@5.9.2))
       kaagent-player-performance-platform-shared-types:
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^0.0.5
+        version: 0.0.5
       prettier:
         specifier: ^3.4.2
         version: 3.8.1
@@ -2884,8 +2884,8 @@ packages:
   jsonfile@6.2.0:
     resolution: {integrity: sha512-FGuPw30AdOIUTRMC2OMRtQV+jkVj2cfPqSeWXv1NEAJ1qZ5zb1X6z1mFhbfOB/iy3ssJCD+3KuZ8r8C3uVFlAg==}
 
-  kaagent-player-performance-platform-shared-types@0.0.4:
-    resolution: {integrity: sha512-0lzHqBg/SknpAn354hzMDwPGXL0fR31VX6fq3dYfiilFbt7DFxkcCLaLhtP/PvYlyyJ/HG8e3gZP/TZ/WH1GUw==}
+  kaagent-player-performance-platform-shared-types@0.0.5:
+    resolution: {integrity: sha512-oohhpSxfQg4QXsyuWMbeBWi+/T4dL/0oWDESYUQdZsG4pfmMlcmkNDrCTyoXtbzzto2snjLt6eidAgvxQL1NhA==}
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -6733,7 +6733,7 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
-  kaagent-player-performance-platform-shared-types@0.0.4: {}
+  kaagent-player-performance-platform-shared-types@0.0.5: {}
 
   keyv@4.5.4:
     dependencies:
