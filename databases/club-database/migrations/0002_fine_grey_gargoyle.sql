@@ -1,0 +1,1 @@
+CREATE INDEX "players_slug_idx" ON "players" USING btree ("slug");

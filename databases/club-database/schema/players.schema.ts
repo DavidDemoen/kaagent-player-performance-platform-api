@@ -15,6 +15,7 @@ export const playersTable = pgTable(
     opteamalId: uuid('opteamal-id').notNull().unique(),
     firstName: varchar('first_name', { length: 255 }).notNull(),
     lastName: varchar('last_name', { length: 255 }).notNull(),
+    slug: varchar('slug', { length: 255 }).notNull(),
     birthDate: date('birth_date').notNull(),
     gender: varchar('gender', { length: 255 }).notNull(),
     shirtNumber: integer('shirt_number').notNull().default(-1),
@@ -26,6 +27,7 @@ export const playersTable = pgTable(
   (t) => [
     index('players_full_name_idx').on(t.firstName, t.lastName),
     index('players_opteamal_id_idx').on(t.opteamalId),
+    index('players_slug_idx').on(t.slug),
   ],
 );
 export const playersRelations = relations(playersTable, ({ many }) => ({

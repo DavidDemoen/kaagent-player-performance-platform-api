@@ -6,6 +6,7 @@ import { TeamsRepository } from '../repositories/teams.repository';
 import { OpteamalPlayerDto, PlayerInsert, PlayerUpsertObject } from '../dto';
 import { APIError } from 'better-auth';
 import { PositionsRepository } from '../repositories/position.repository';
+import { generatePlayerSlug } from 'lib/utils/slugs';
 
 @Injectable()
 export class PlayerSyncOrchestrator {
@@ -80,7 +81,9 @@ export class PlayerSyncOrchestrator {
               `Syncing position ${positionHistoryObject.positionName} for player with opteamal id ${player.opteamalId}`,
             );
 
-            const response = await this.positionsRepository.createPosition({name: positionHistoryObject.positionName});
+            const response = await this.positionsRepository.createPosition({
+              name: positionHistoryObject.positionName,
+            });
 
             const positionUpsertResp =
               await this.positionsHistoryRepository.upsertPositionsHistory({
@@ -130,6 +133,7 @@ export class PlayerSyncOrchestrator {
       gender: gender ?? 'not_provided',
       nationality: nationality ?? 'not_provided',
       secondNationality,
+      slug: generatePlayerSlug(firstName, lastName),
       createdAt: new Date(createdAt),
       updatedAt: new Date(updatedAt),
     };
