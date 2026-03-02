@@ -1,0 +1,1 @@
+ALTER TABLE "evaluation_templates" ADD PRIMARY KEY ("name");
