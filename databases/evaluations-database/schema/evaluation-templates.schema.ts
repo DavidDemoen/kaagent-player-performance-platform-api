@@ -1,3 +1,4 @@
+import { relations } from 'drizzle-orm';
 import {
   boolean,
   index,
@@ -7,13 +8,14 @@ import {
   uuid,
   varchar,
 } from 'drizzle-orm/pg-core';
+import { evaluationsTable } from '../schema';
 
-export const evalutionTemplatesTable = pgTable(
+export const evaluationTemplatesTable = pgTable(
   'evaluation_templates',
   {
     id: uuid('id').primaryKey().defaultRandom(),
     type: varchar('type', { length: 50 }).notNull(),
-    version: varchar('version').notNull(),
+    version: varchar('version').notNull().default('1.0'),
     templateScheme: jsonb('template_scheme').notNull(),
     isActive: boolean('is_active').notNull().default(true),
     createdAt: timestamp('created_at').notNull().defaultNow(),
@@ -23,4 +25,11 @@ export const evalutionTemplatesTable = pgTable(
       .$onUpdateFn(() => new Date()),
   },
   (t) => [index('evaluation_templates_type_idx').on(t.type)],
+);
+
+export const evaluationTemplatesRelations = relations(
+  evaluationTemplatesTable,
+  ({ many }) => ({
+    evaluations: many(evaluationsTable),
+  }),
 );
